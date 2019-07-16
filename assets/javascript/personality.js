@@ -360,11 +360,7 @@ $("#submit-btn").on("click", function (event) {
     var sortedResults = resultsArr.sort(function (a, b) {
         return a - b;
     });
-    console.log("etotal " + eTotal)
-    console.log("resultsArr" + resultsArr);
-    console.log("ctotal " + cTotal)
-    console.log("sorted" + sortedResults);
-
+ 
     if (eTotal === sortedResults[4]) {
         ajaxGifCall("l1J9Ox4goQckiAb1m");
         $("#resultsP").append(
