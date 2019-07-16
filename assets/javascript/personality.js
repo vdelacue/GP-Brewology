@@ -374,6 +374,7 @@ $("#submit-btn").on("click", function (event) {
          <p>You are a very social person. You love being at the center of things, meeting new people and 
          steering the conversation to new things. An IPA, like you is a strong personality that doesn't bite its 
          tongue. They're trendy, chic and will get you feeling nice after just a couple!</p>
+         <a href="https://www.verywellmind.com/the-big-five-personality-dimensions-2795422">Click here to learn more about Big 5 Personality Traits</a>
     `)
     } else if (cTotal === sortedResults[4]) {
         ajaxGifCall("lz4APvJRdLxLBwZOG9");
@@ -385,6 +386,7 @@ $("#submit-btn").on("click", function (event) {
             detail and enjoy your set schedule.</p>
             <p>A Light Beer would suit you best for it's refresing taste,low carbs and low calories. 
             A light beer allows you to relax without taking away from the rest of your day!</p>
+            <a href="https://www.verywellmind.com/the-big-five-personality-dimensions-2795422">Click here to learn more about Big 5 Personality Traits</a>
         `)
     } else if (oTotal === sortedResults[4]) {
         ajaxGifCall("BcP32J8pMXAzqEkGDj");
@@ -396,6 +398,7 @@ $("#submit-btn").on("click", function (event) {
             and thinking about abstract concepts.</p>
             <p>A sour would suit your need for something unique and adventurous. Outside the norm, sours have a higher 
             ABV and such diverse flavors, they will surely keep you interested.</p>
+            <a href="https://www.verywellmind.com/the-big-five-personality-dimensions-2795422">Click here to learn more about Big 5 Personality Traits</a>
         `)
     } else if (aTotal === sortedResults[4]) {
         ajaxGifCall("ycDclgXI40MGcpA5pK");
@@ -407,6 +410,7 @@ $("#submit-btn").on("click", function (event) {
             happiness and are always there when someone needs assistance.</p>
             <p>A Belgian Wheat would suit you best for its sweetness and accessibility. A popular people pleaser, 
             the belgian wheat like you is always there when someone needs a little pick me up!</p>
+            <a href="https://www.verywellmind.com/the-big-five-personality-dimensions-2795422">Click here to learn more about Big 5 Personality Traits</a>
              `)
     } else if (nTotal === sortedResults[4]) {
         ajaxGifCall("2WHcT6O69wS3vouGVP");
