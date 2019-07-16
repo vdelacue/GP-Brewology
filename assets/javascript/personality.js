@@ -281,19 +281,18 @@ function createPromptItems() {
         var promptsDiv = $(`<div class="questionCon" id="div${i}"></div>`)
         promptsDiv.append(`<p>${inputlVal}</p>`);
         $("#quiz").append(promptsDiv);
+        
         //for each option create a radio button that groups questions together
         for (var x = 0; x < promptsVals.length; x++) {
             var radioVal = prompts[i].prompt_values[x].value;
             var radioWeight = prompts[i].prompt_values[x].weight;
             var inputGroup = i;
+
             promptsDiv.append(
-                `
-            <label>
-            <input class="form-check-input" name="${inputGroup}" type="radio" value="${radioWeight}">
-            <span  value="${radioVal}" name="${inputGroup}">${radioVal}</span>
-            </label>
-        
-          `
+                `<label>
+                <input class="form-check-input" name="${inputGroup}" type="radio" value="${radioWeight}">
+                <span  value="${radioVal}" name="${inputGroup}">${radioVal}</span>
+                </label>`
             );
 
         }
@@ -345,20 +344,19 @@ var ajaxGifCall = function (strID) {
     });
 };
 
-
 $("#submit-btn").on("click", function (event) {
+
     event.preventDefault();
     console.log("results clicked");
     $("#quizForm").hide();
-
-
+//weight total of each personality trait
     eTotal = prompts[0].userChoice + prompts[5].userChoice;
     aTotal = prompts[1].userChoice + prompts[6].userChoice;
     cTotal = prompts[2].userChoice + prompts[7].userChoice;
     nTotal = prompts[3].userChoice + prompts[8].userChoice;
     oTotal = prompts[4].userChoice + prompts[9].userChoice;
 
-
+    //array of result totals that can be sorted to find strongest trait
     var resultsArr = [eTotal, aTotal, cTotal, nTotal, oTotal];
     var sortedResults = resultsArr.sort(function (a, b) {
         return a - b;
