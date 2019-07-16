@@ -18,7 +18,7 @@ Background image is set
 
 A row is created to hold the Brewology logo in the center of the page
 
-Two columns with nothing that take up two columns each they are surrounding the column with the link to the personality test and a link to look for nearby brewerys. The links are both in one column class and takes up eight columns. This keeps the link centered.
+Two columns with nothing that take up two columns each they are surrounding the column with the links to the personality test and a link to look for nearby brewerys. The links are both in one column class and takes up eight columns. This keeps the link centered.
 
 When the buttons "Location" and "Personality" are pressed they go to the same page. Personality brings you to the top of that page while location brings you to the bottom so the application so that the user screen displays the app they clicked on hthe top.   
  
