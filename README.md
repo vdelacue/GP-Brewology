@@ -13,8 +13,7 @@ The personality quiz chooses a beer you might like based on your personality.
 Yelp API is used to find nearby brewery's.
 
 #Screenshots
-
-![](assets/images/Screenshot (10).png)
+![alt text](https://github.com/vdelacue/GP-Brewology/master/README.md/assets/images/Screenshot (10).png)
 
 #Code
 
