@@ -287,7 +287,7 @@ function createPromptItems() {
             var radioWeight = prompts[i].prompt_values[x].weight;
             var inputGroup = i;
             promptsDiv.append(
-               `
+                `
             <label>
             <input class="form-check-input" name="${inputGroup}" type="radio" value="${radioWeight}">
             <span  value="${radioVal}" name="${inputGroup}">${radioVal}</span>
@@ -295,7 +295,7 @@ function createPromptItems() {
         
           `
             );
-            
+
         }
     }
 }
@@ -310,7 +310,7 @@ $('#quiz').on('change', '.form-check-input', function () {
     // set answer to question's userAnswer property
     prompts[questionIndex].userChoice = parseInt(answer);
     console.log("userChoice" + answer)
-    
+
 });
 
 //---------------------------------------RESPONSE / SUBMISSION LOGIC -------------------//   
@@ -322,12 +322,28 @@ var cTotal = 0;
 var nTotal = 0;
 var oTotal = 0;
 
-$("#submit-btn").on("click", function(event){ 
+$("#submit-btn").on("click", function (event) {
     event.preventDefault();
     console.log("results clicked");
     $("#quizForm").hide();
-  
-    
+    var id = "xUPGcFeJiX8IImdEsw";
+    var queryUrl =
+        "https://api.giphy.com/v1/gifs/" +
+        id +
+        "?api_key=2bWMtTcIEwQIgbcCIAOXnhGFI9XyklEZ";
+
+    $.ajax({
+        url: queryUrl,
+        method: "GET"
+    }).then(function (response) {
+        var gifResults = response.data.images.fixed_height.url;
+        var gifImage = $("<img>");
+        gifImage.attr("src", gifResults);
+        gifImage.attr("alt", "cheers");
+        // console.log(results);
+        $("#resultsP").prepend(gifImage);
+    });
+
     eTotal = prompts[0].userChoice + prompts[5].userChoice;
     aTotal = prompts[1].userChoice + prompts[6].userChoice;
     cTotal = prompts[2].userChoice + prompts[7].userChoice;

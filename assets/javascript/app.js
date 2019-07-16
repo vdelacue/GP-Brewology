@@ -70,23 +70,6 @@ $(document).ready(function () {
 
   $("#submit-btn").on("click", function () {
 //WHEN YOU DECIDE GIF WRITE ID HERE FOR THE RESULT
-    var id = "l0MYrZOf3nGchoTdK";
-    var queryUrl =
-      "https://api.giphy.com/v1/gifs/" +
-      id +
-      "?api_key=2bWMtTcIEwQIgbcCIAOXnhGFI9XyklEZ";
-
-    $.ajax({
-      url: queryUrl,
-      method: "GET"
-    }).then(function (response) {
-      var results = response.data.images.fixed_height.url;
-      var gifImage = $("<img>");
-      gifImage.attr("src", results);
-      gifImage.attr("alt", "Cheers");
-      // console.log(results);
-      $("#gif-image").prepend(gifImage);
-      $("#cheersButton").hide();
-    });
+   
   });
 });
