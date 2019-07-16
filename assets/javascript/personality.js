@@ -400,7 +400,7 @@ $("#submit-btn").on("click", function (event) {
     } else if (aTotal === sortedResults[4]) {
         ajaxGifCall("ycDclgXI40MGcpA5pK");
         $("#resultsP").append(
-            `<h1>Drink a Belgian Wheat or a tasty Cider!</h1>
+            `<h1>Drink a Belgian Wheat or a Tasty Cider!</h1>
             <h4>You Scored ${aTotal} out of 10 on Agreeableness Trait!</h4>
             <br>
             <p>You are a very empathetic person who cares for others. You enjoy helping and contributing to others 
@@ -409,12 +409,15 @@ $("#submit-btn").on("click", function (event) {
             the belgian wheat like you is always there when someone needs a little pick me up!</p>
              `)
     } else if (nTotal === sortedResults[4]) {
-        ajaxGifCall("ID#");
-        $("#resultsP").append(
-            `<h4>You Scored ${nTotal} out of 10 on Agreeableness Trait!</h4>
-         <br>
-         <p>You enjoy meeting new people and like to start conversations!</p>
-        <p> </p>`)
+        ajaxGifCall("2WHcT6O69wS3vouGVP");
+        $("#resultsP").append( `<h1>Drink a Stout!</h1>
+        <h4>You Scored ${nTotal} out of 10 on Neuroticism Trait!</h4>
+        <br>
+        <p>You are sensitive person more inclined to feelings of anxiety. 
+        It takes you a little while to bounce back after stressful events. And a Stout like you is a little on the dark side, but heavy and warm like a blanket or a hug, it'll wrap itself around you and be just what you need to weather the storm.</p>
+        <p>Brown, porter, and stout crafts bristle with dark, creamy flavors are your brand. These are the kinds of beers one drinks leisurely, with each sip savored and appreciated. Fans of brown/porter/stout beers mirror this sipping style in other aspects of their lives, 
+        making them contemplative and intelligent. They love engaging in meaningful conversations among intimate circles of friends. They much prefer small social settings, and avoid large, loud, crowded environments.<p>     
+        <a href="https://www.verywellmind.com/the-big-five-personality-dimensions-2795422">Click here to learn more about Big 5 Personality Traits</a>`)
     }
 
 
