@@ -347,3 +347,38 @@ $("#submit-btn").on("click", function(event){
      <p>BLAH BLAH BLAH BLAH</p>
      BLAH BALASDLIFJHALSDKJFHALIUFHALKSJDFHALSKDJFH`)
 });
+
+
+// <div id="conscientious">
+//         <button type="button" class="btn btn-primary" id="cheersButton">Submit</button>
+//         <div id="gif-image"></div>
+//        <h1>Drink a Light Beer!</h1>
+//            <div id="conscientious-img"></div>
+//        <p>You spend a lot of time preparing and finish important tasks right away, you pay attention to detail and enjoy your set schedule.</p>
+//        <p>A Light Beer would suit you best for it's refresing taste,low carbs and calories. Still allowing you to relax without taking away from the rest of your day!</p>
+//        <!-- <img id="liteBeer" src="https://thumbor.thedailymeal.com/bpgw-cMCPbYL9E56fnPZFl14HbM=/870x565/https://www.thedailymeal.com/sites/default/files/2014/12/12/lightbeertastetestmainhp-coors-miller-heineken-amstel_0.jpg"
+//        alt="Lite Beers"> -->
+//     </div>
+//    <div id="openness-to-experience">
+//        <h1>Drink a Sour Beer!</h1>
+//            <div id="openness-to-experience-img"></div>
+//        <p>You are very open to new ideas and experiences. You love trying new things, tackling new challenges, and thinking about abstract concepts.</p>
+//        <p>A sour would suit your need for something different and adventurous. Outside the norm, with a higher ABV and such a diverse flavor options, sours will surely keep you interested.</p>
+//    </div>
+//    <div id="agreeableness">
+//        <h1>Drink a Belgian Wheat!</h1>
+//            <div id="agreeableness-img"></div>
+//        <p>You are a very empathetic person who cares for others. You enjoy helping and contributing to others happiness and are always there when someone needs assistance.</p>
+//        <p>A Belgian Wheat would suit you best for its sweetness and accessibility. A popular people pleaser, the belgian wheat like you is always there when someone needs a little pick me up!</p>
+//    </div>
+//    <div id="extraversion">
+//         <h1>Drink and IPA!</h1>
+//         <div id="extraversion-img"></div>
+//        <p>You are a very social person. You love being at the center of things, meeting new people and steering the conversation to new things. An IPA, like you is a strong personality that doesn't bite its tongue. They're trendy, chic and will get you feeling nice after just a couple!</p>
+//     </div>
+//     </div>
+//     <div id="neroticism">
+//         <h1>Drink a Strout!</h1>
+//         <div id="neroticism-img"></div>
+//         <p>You are an emotional person, more inclined to feelings of depression or anxiety. It takes you a little while to bounce back after stressful events. And a Stout like you is a little on the dark side, but heavy and warm like a blanket or a hug, it'll wrap itself around you and be just what you need to weather the storm.         </p>
+//     </div>
