@@ -381,8 +381,10 @@ $("#submit-btn").on("click", function (event) {
             `<h1>Drink a Light Beer!</h1>
             <h4>You Scored ${cTotal} out of 10 on Conscientiousness Trait!</h4>
             <br>
-            <p>You spend a lot of time preparing and finish important tasks right away, you pay attention to detail and enjoy your set schedule.</p>
-            <p>A Light Beer would suit you best for it's refresing taste,low carbs and low calories. A light beer allows you to relax without taking away from the rest of your day!</p>
+            <p>You spend a lot of time preparing and finish important tasks right away, you pay attention to 
+            detail and enjoy your set schedule.</p>
+            <p>A Light Beer would suit you best for it's refresing taste,low carbs and low calories. 
+            A light beer allows you to relax without taking away from the rest of your day!</p>
         `)
     } else if (oTotal === sortedResults[4]) {
         ajaxGifCall("BcP32J8pMXAzqEkGDj");
@@ -390,17 +392,21 @@ $("#submit-btn").on("click", function (event) {
             `<h1>Drink a Sour Beer!</h1>
             <h4>You Scored ${oTotal} out of 10 on Openness to New Experiences Trait!</h4>
             <br>
-            <p>You spend a lot of time preparing and finishing important tasks right away, you pay attention to detail and enjoy your set schedule.</p>
-            <p>A Light Beer would suit you best for it's refresing taste,low carbs and low calories. A light beer allows you to relax without taking away from the rest of your day!</p>
+            <p>You are very open to new ideas and experiences. You love trying new things, tackling new challenges, 
+            and thinking about abstract concepts.</p>
+            <p>A sour would suit your need for something unique and adventurous. Outside the norm, sours have a higher 
+            ABV and such diverse flavors, they will surely keep you interested.</p>
         `)
     } else if (aTotal === sortedResults[4]) {
-        ajaxGifCall("ID#");
+        ajaxGifCall("ycDclgXI40MGcpA5pK");
         $("#resultsP").append(
             `<h1>Drink a Belgian Wheat or a tasty Cider!</h1>
             <h4>You Scored ${aTotal} out of 10 on Agreeableness Trait!</h4>
-         <br>
-         <p>You are a very empathetic person who cares for others. You enjoy helping and contributing to others happiness and are always there when someone needs assistance.</p>
-                 <p>A Belgian Wheat would suit you best for its sweetness and accessibility. A popular people pleaser, the belgian wheat like you is always there when someone needs a little pick me up!</p>
+            <br>
+            <p>You are a very empathetic person who cares for others. You enjoy helping and contributing to others 
+            happiness and are always there when someone needs assistance.</p>
+            <p>A Belgian Wheat would suit you best for its sweetness and accessibility. A popular people pleaser, 
+            the belgian wheat like you is always there when someone needs a little pick me up!</p>
              `)
     } else if (nTotal === sortedResults[4]) {
         ajaxGifCall("ID#");
