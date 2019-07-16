@@ -1,5 +1,3 @@
-// -------------Start of Quiz --------------//
-
 //variable for quiz stored in an array where each question is its own object 
 var prompts = [{
         prompt: '1. I see myself as someone who is reserved',
@@ -278,7 +276,7 @@ function createPromptItems() {
     for (var i = 0; i < prompts.length; i++) {
         var inputlVal = prompts[i].prompt;
         var promptsVals = prompts[0].prompt_values;
-        var promptsDiv = $(`<div class="questionCon" id="div${i}"></div>`)
+        var promptsDiv = $(`<div class="questionCon" id="div${i}"></div>`);
         promptsDiv.append(`<p>${inputlVal}</p>`);
         $("#quiz").append(promptsDiv);
 
@@ -294,13 +292,12 @@ function createPromptItems() {
                 <span  value="${radioVal}" name="${inputGroup}">${radioVal}</span>
                 </label>`
             );
-
         }
     }
-}
+};
 createPromptItems();
 
-// function that stores user answer 
+// ------------------------------function that stores user answer 
 $('#quiz').on('change', '.form-check-input', function () {
     // GET question index out of "name" attribute so we know what question you answered
     const questionIndex = $(this).attr('name');
@@ -308,12 +305,9 @@ $('#quiz').on('change', '.form-check-input', function () {
     const answer = $(this).val();
     // set answer to question's userAnswer property
     prompts[questionIndex].userChoice = parseInt(answer);
-    console.log("userChoice" + answer)
-
 });
 
 //---------------------------------------RESPONSE / SUBMISSION LOGIC -------------------//   
-
 //Global variables for response function
 var eTotal = 0;
 var aTotal = 0;
@@ -322,13 +316,11 @@ var nTotal = 0;
 var oTotal = 0;
 
 //Global function for ajax call
-
 var ajaxGifCall = function (strID) {
     var queryUrl =
         "https://api.giphy.com/v1/gifs/" +
         strID +
         "?api_key=2bWMtTcIEwQIgbcCIAOXnhGFI9XyklEZ";
-
     $.ajax({
         url: queryUrl,
         method: "GET"
@@ -355,31 +347,39 @@ $("#submit-btn").on("click", function (event) {
     nTotal = prompts[3].userChoice + prompts[8].userChoice;
     oTotal = prompts[4].userChoice + prompts[9].userChoice;
 
-    //array of result totals that can be sorted to find strongest trait at last index of 4
+    //array of result totals that can be sorted to find strongest trait -- at last index of 4
     var resultsArr = [eTotal, aTotal, cTotal, nTotal, oTotal];
     var sortedResults = resultsArr.sort(function (a, b) {
         return a - b;
     });
- 
+    // default result if all traits are low / less than a weight of 6
     if (sortedResults[4] < 6) {
         ajaxGifCall("3o752gZdDHjObx309W");
-        $("#resultsP").append( `<h1>You're clearly a Wine person!</h1>
-        <br>
-        <p>Based on your results, 
-        wine would be a better option for you! You enjoy the finer things in life and taking this quiz was not one of them!</p>
-        <a href="https://www.verywellmind.com/the-big-five-personality-dimensions-2795422">Click here to learn more about Big 5 Personality Traits</a>`)
-    } else if (eTotal === sortedResults[4]) {
+        $("#resultsP").append(
+            `<h1>You're clearly a Wine person!</h1>
+            <br>
+            <p>Based on your results, 
+            wine would be a better option for you! You enjoy the finer things in life and taking this quiz was not one of them!</p>
+            <a href="https://www.verywellmind.com/the-big-five-personality-dimensions-2795422">
+            Click here to learn more about Big 5 Personality Traits</a>`
+        )
+    }
+    //results for Extraversion trait as highest weight
+    else if (eTotal === sortedResults[4]) {
         ajaxGifCall("l1J9Ox4goQckiAb1m");
         $("#resultsP").append(
             `<h1>Drink an IPA!</h1>
             <h4>You Scored ${eTotal} out of 10 on Extraversion Trait!</h4>
-         <br>
-         <p>You are a very social person. You love being at the center of things, meeting new people and 
-         steering the conversation to new things. An IPA, like you is a strong personality that doesn't bite its 
-         tongue. They're trendy, chic and will get you feeling nice after just a couple!</p>
-         <a href="https://www.verywellmind.com/the-big-five-personality-dimensions-2795422">Click here to learn more about Big 5 Personality Traits</a>
-    `)
-    } else if (cTotal === sortedResults[4]) {
+            <br>
+            <p>You are a very social person. You love being at the center of things, meeting new people and 
+            steering the conversation to new things. An IPA, like you is a strong personality that doesn't bite its 
+            tongue. They're trendy, chic and will get you feeling nice after just a couple!</p>
+            <a href="https://www.verywellmind.com/the-big-five-personality-dimensions-2795422">
+            Click here to learn more about Big 5 Personality Traits</a>`
+        )
+    }
+    //results for Consciensciousness trait as highest weight
+    else if (cTotal === sortedResults[4]) {
         ajaxGifCall("lz4APvJRdLxLBwZOG9");
         $("#resultsP").append(
             `<h1>Drink a Light Beer!</h1>
@@ -389,9 +389,12 @@ $("#submit-btn").on("click", function (event) {
             detail and enjoy your set schedule.</p>
             <p>A Light Beer would suit you best for it's refresing taste,low carbs and low calories. 
             A light beer allows you to relax without taking away from the rest of your day!</p>
-            <a href="https://www.verywellmind.com/the-big-five-personality-dimensions-2795422">Click here to learn more about Big 5 Personality Traits</a>
-        `)
-    } else if (oTotal === sortedResults[4]) {
+            <a href="https://www.verywellmind.com/the-big-five-personality-dimensions-2795422">
+            Click here to learn more about Big 5 Personality Traits</a>`
+        )
+    }
+    //results for Openness to New Experience trait as highest weight
+    else if (oTotal === sortedResults[4]) {
         ajaxGifCall("BcP32J8pMXAzqEkGDj");
         $("#resultsP").append(
             `<h1>Drink a Sour Beer!</h1>
@@ -401,9 +404,12 @@ $("#submit-btn").on("click", function (event) {
             and thinking about abstract concepts.</p>
             <p>A sour would suit your need for something unique and adventurous. Outside the norm, sours have a higher 
             ABV and such diverse flavors, they will surely keep you interested.</p>
-            <a href="https://www.verywellmind.com/the-big-five-personality-dimensions-2795422">Click here to learn more about Big 5 Personality Traits</a>
-        `)
-    } else if (aTotal === sortedResults[4]) {
+            <a href="https://www.verywellmind.com/the-big-five-personality-dimensions-2795422">
+            Click here to learn more about Big 5 Personality Traits</a>`
+        )
+    }
+    //results for Agreeableness trait as highest weight
+    else if (aTotal === sortedResults[4]) {
         ajaxGifCall("ycDclgXI40MGcpA5pK");
         $("#resultsP").append(
             `<h1>Drink a Belgian Wheat or a Tasty Cider!</h1>
@@ -413,59 +419,23 @@ $("#submit-btn").on("click", function (event) {
             happiness and are always there when someone needs assistance.</p>
             <p>A Belgian Wheat would suit you best for its sweetness and accessibility. A popular people pleaser, 
             the belgian wheat like you is always there when someone needs a little pick me up!</p>
-            <a href="https://www.verywellmind.com/the-big-five-personality-dimensions-2795422">Click here to learn more about Big 5 Personality Traits</a>
-             `)
-    } else if (nTotal === sortedResults[4]) {
+            <a href="https://www.verywellmind.com/the-big-five-personality-dimensions-2795422">
+            Click here to learn more about Big 5 Personality Traits</a>`
+        )
+    }
+    //results for Neuroticism trait as highest weight
+    else if (nTotal === sortedResults[4]) {
         ajaxGifCall("2WHcT6O69wS3vouGVP");
-        $("#resultsP").append( `<h1>Drink a Stout!</h1>
-        <h4>You Scored ${nTotal} out of 10 on Neuroticism Trait!</h4>
-        <br>
-        <p>You are sensitive person more inclined to feelings of anxiety. 
-        It takes you a little while to bounce back after stressful events. And a Stout like you is a little on the dark side, but heavy and warm like a blanket or a hug, it'll wrap itself around you and be just what you need to weather the storm.</p>
-        <p>Brown, porter, and stout crafts bristle with dark, creamy flavors are your brand. These are the kinds of beers one drinks leisurely, with each sip savored and appreciated. Fans of brown/porter/stout beers mirror this sipping style in other aspects of their lives, 
-        making them contemplative and intelligent. They love engaging in meaningful conversations among intimate circles of friends. They much prefer small social settings, and avoid large, loud, crowded environments.<p>     
-        <a href="https://www.verywellmind.com/the-big-five-personality-dimensions-2795422">Click here to learn more about Big 5 Personality Traits</a>`)
-    } 
-
-
-
-    console.log("this is results Arr" + resultsArr)
-    console.log("this is sorted Results" + sortedResults)
-
+        $("#resultsP").append(
+            `<h1>Drink a Stout!</h1>
+            <h4>You Scored ${nTotal} out of 10 on Neuroticism Trait!</h4>
+            <br>
+            <p>You are sensitive person more inclined to feelings of anxiety. 
+            It takes you a little while to bounce back after stressful events. And a Stout like you is a little on the dark side, but heavy and warm like a blanket or a hug, it'll wrap itself around you and be just what you need to weather the storm.</p>
+            <p>Brown, porter, and stout crafts bristle with dark, creamy flavors are your brand. These are the kinds of beers one drinks leisurely, with each sip savored and appreciated. Fans of brown/porter/stout beers mirror this sipping style in other aspects of their lives, 
+            making them contemplative and intelligent. They love engaging in meaningful conversations among intimate circles of friends. They much prefer small social settings, and avoid large, loud, crowded environments.<p>     
+            <a href="https://www.verywellmind.com/the-big-five-personality-dimensions-2795422">
+            Click here to learn more about Big 5 Personality Traits</a>`
+        )
+    }
 });
-
-
-// <div id="conscientious">
-//         <button type="button" class="btn btn-primary" id="cheersButton">Submit</button>
-//         <div id="gif-image"></div>
-//        <h1>Drink a Light Beer!</h1>
-//            <div id="conscientious-img"></div>
-//        <p>You spend a lot of time preparing and finish important tasks right away, you pay attention to detail and enjoy your set schedule.</p>
-//        <p>A Light Beer would suit you best for it's refresing taste,low carbs and calories. Still allowing you to relax without taking away from the rest of your day!</p>
-//        <!-- <img id="liteBeer" src="https://thumbor.thedailymeal.com/bpgw-cMCPbYL9E56fnPZFl14HbM=/870x565/https://www.thedailymeal.com/sites/default/files/2014/12/12/lightbeertastetestmainhp-coors-miller-heineken-amstel_0.jpg"
-//        alt="Lite Beers"> -->
-//     </div>
-//    <div id="openness-to-experience">
-//        <h1>Drink a Sour Beer!</h1>
-//            <div id="openness-to-experience-img"></div>
-//        <p>You are very open to new ideas and experiences. You love trying new things, tackling new challenges, and thinking about abstract concepts.</p>
-//        <p>A sour would suit your need for something different and adventurous. Outside the norm, with a higher ABV and such a diverse flavor options, sours will surely keep you interested.</p>
-//    </div>
-//    <div id="agreeableness">
-//        <h1>Drink a Belgian Wheat!</h1>
-//            <div id="agreeableness-img"></div>
-//        <p>You are a very empathetic person who cares for others. You enjoy helping and contributing to others happiness and are always there when someone needs assistance.</p>
-//        <p>A Belgian Wheat would suit you best for its sweetness and accessibility. A popular people pleaser, the belgian wheat like you is always there when someone needs a little pick me up!</p>
-//    </div>
-//    <div id="extraversion">
-//         <h1>Drink and IPA!</h1>
-//         <div id="extraversion-img"></div>
-//        <p>You are a very social person. You love being at the center of things, meeting new people and steering the conversation to new things. An IPA, like you is a strong personality that doesn't bite its tongue. They're trendy, chic and will get you feeling nice after just a couple!</p>
-//     </div>
-//     </div>
-//     <div id="neroticism">
-//         <h1>Drink a Strout!</h1>
-//         <div id="neroticism-img"></div>
-//         <p>You are an emotional person, more inclined to feelings of anxiety. It takes you a little while to bounce back after stressful events. And a Stout like you is a little on the dark side, but heavy and warm like a blanket or a hug, it'll wrap itself around you and be just what you need to weather the storm.         </p>
-//          <p>Brown, porter, and stout crafts bristle with dark, creamy flavors. These are the kinds of beers one drinks leisurely, with each sip savored and appreciated. Fans of brown/porter/stout beers mirror this sipping style in other aspects of their lives, making them contemplative and intelligent. They love engaging in meaningful conversations among intimate circles of friends. They much prefer small social settings, and avoid large, loud, crowded environments.<p>     
-//</div>
