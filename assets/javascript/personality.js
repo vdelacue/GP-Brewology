@@ -322,14 +322,13 @@ var cTotal = 0;
 var nTotal = 0;
 var oTotal = 0;
 
-$("#submit-btn").on("click", function (event) {
-    event.preventDefault();
-    console.log("results clicked");
-    $("#quizForm").hide();
-    var id = "xUPGcFeJiX8IImdEsw";
+//Global function for ajax call
+
+var ajaxGifCall = function (strID) {
+
     var queryUrl =
         "https://api.giphy.com/v1/gifs/" +
-        id +
+        strID +
         "?api_key=2bWMtTcIEwQIgbcCIAOXnhGFI9XyklEZ";
 
     $.ajax({
@@ -339,29 +338,75 @@ $("#submit-btn").on("click", function (event) {
         var gifResults = response.data.images.fixed_height.url;
         var gifImage = $("<img>");
         gifImage.attr("src", gifResults);
+        gifImage.attr("class", "giffyResult")
         gifImage.attr("alt", "cheers");
         // console.log(results);
         $("#resultsP").prepend(gifImage);
     });
+};
+
+
+$("#submit-btn").on("click", function (event) {
+    event.preventDefault();
+    console.log("results clicked");
+    $("#quizForm").hide();
+
 
     eTotal = prompts[0].userChoice + prompts[5].userChoice;
     aTotal = prompts[1].userChoice + prompts[6].userChoice;
     cTotal = prompts[2].userChoice + prompts[7].userChoice;
     nTotal = prompts[3].userChoice + prompts[8].userChoice;
     oTotal = prompts[4].userChoice + prompts[9].userChoice;
-    console.log("this is etotal" + eTotal);
-    console.log("this is the openess total:" + oTotal + prompts[4].userChoice);
+
 
     var resultsArr = [eTotal, aTotal, cTotal, nTotal, oTotal];
-    var sortedResults = resultsArr.sort();
+    var sortedResults = resultsArr.sort(function (a, b) {
+        return a - b;
+    });
+    console.log()
+    if (eTotal === sortedResults[4]) {
+        ajaxGifCall("ID#");
+        $("#resultsP").append(
+            `<h4>You Scored ${eTotal} out of 10 on Extraversion Trait!</h4>
+         <br>
+         <p>You enjoy meeting new people and like to start conversations!</p>
+        <p> </p>`)
+    } else if (nTotal === sortedResults[4]) {
+        ajaxGifCall("ID#");
+        $("#resultsP").append(
+            `<h4>You Scored ${nTotal} out of 10 on Neuroticism Trait!</h4>
+         <br>
+         <p>You enjoy meeting new people and like to start conversations!</p>
+        <p> </p>`)
+    } else if (oTotal === sortedResults[4]) {
+        ajaxGifCall("ID#");
+        $("#resultsP").append(
+            `<h4>You Scored ${oTotal} out of 10 on Openness Trait!</h4>
+         <br>
+         <p>You enjoy meeting new people and like to start conversations!</p>
+        <p> </p>`)
+    } else if (cTotal === sortedResults[4]) {
+        ajaxGifCall("ID#");
+        $("#resultsP").append(
+            `<h1>Drink a Light Beer!</h1>
+            <h4>You Scored ${cTotal} out of 10 on Conscientious Trait!</h4>
+         <br>
+         <p>You spend a lot of time preparing and finish important tasks right away, you pay attention to detail and enjoy your set schedule.</p>
+//        <p>A Light Beer would suit you best for it's refresing taste,low carbs and calories. Still allowing you to relax without taking away from the rest of your day!</p>`)
+    } else if (aTotal === sortedResults[4]) {
+        ajaxGifCall("ID#");
+        $("#resultsP").append(
+            `<h4>You Scored ${aTotal} out of 10 on Agreeableness Trait!</h4>
+         <br>
+         <p>You enjoy meeting new people and like to start conversations!</p>
+        <p> </p>`)
+    }
+
+
 
     console.log("this is results Arr" + resultsArr)
     console.log("this is sorted Results" + sortedResults)
-    $("#resultsP").append(
-        `<h4>You Scored ${eTotal} on Extraversion Trait!</h4>
-     <br>
-     <p>BLAH BLAH BLAH BLAH</p>
-     BLAH BALASDLIFJHALSDKJFHALIUFHALKSJDFHALSKDJFH`)
+
 });
 
 

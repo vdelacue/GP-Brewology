@@ -42,8 +42,6 @@ $(document).ready(function () {
       }
     }).then(function (response) {
       console.log(response); 
-      
-      //talk about what came back through yelp through the respoonse (big array of nested objects)
 
       // looping through all of the yelp businesses to display the name, address, and image
       for (var i = 0; i < 12; i++) {
@@ -87,24 +85,4 @@ $(document).ready(function () {
   //we needed specific images
 //var id = ["lz4APvJRdLxLBwZOG9", "BcP32J8pMXAzqEkGDj", "ycDclgXI40MGcpA5pK", "2WHcT6O69wS3vouGVP", "l1J9Ox4goQckiAb1m"]
 
-//   $("#submit-btn").on("click", function () {
-// //WHEN YOU DECIDE GIF WRITE ID HERE FOR THE RESULT
-// var id = "xUPGcFeJiX8IImdEsw";
-// var queryUrl =
-//     "https://api.giphy.com/v1/gifs/" +
-//     id +
-//     "?api_key=2bWMtTcIEwQIgbcCIAOXnhGFI9XyklEZ";
-
-// $.ajax({
-//     url: queryUrl,
-//     method: "GET"
-// }).then(function (response) {
-//     var gifResults = response.data.images.fixed_height.url;
-//     var gifImage = $("<img>");
-//     gifImage.attr("src", gifResults);
-//     gifImage.attr("alt", "cheers");
-//     // console.log(results);
-//     $("#resultsP").prepend(gifImage);
-//   });
-//   });
 });
