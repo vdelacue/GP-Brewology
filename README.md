@@ -14,7 +14,7 @@ Yelp API is used to find nearby brewery's.
 
 #Screenshots
 
-![alt text](assets/images/Screenshot (10).png)
+![](assets/images/Screenshot (10).png)
 
 #Code
 
