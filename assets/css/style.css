@@ -16,33 +16,18 @@ body {
     border-color: black;
 
 }
-.card-body{background-color: transparent;
-    background-image: url("https://files.slack.com/files-pri/TKD85M50X-FL8L5CW49/image.png");
-    border-color: black;
+
+.card-body {
+    background-image: url("../images/image.png");
 }
 
-form {
-    /* border: 2px solid #222; */
+#quizForm {
+    background-color: beige;
     padding: 2%;
-    padding-top: 0;
-    border-color: black;
 }
 
-.btn-outline-light {
-    color: rgb(0, 0, 0);
-}
-
-
-
-
-.fa {
-    padding-right: 2px;
-}
-
-#articleContainer {
-    margin-top: 20px;
-    min-height: 100px;
-    border-color: black;
+.results {
+    background-color: beige;
 }
 
 #brewology {
@@ -51,23 +36,24 @@ form {
 
 }
 
-#surveyDiv {
-    background-color: transparent;
-    background-image: url("https://files.slack.com/files-pri/TKD85M50X-FL8L5CW49/image.png");
-    border-color: black;
-}
-
-
-
-
-#articleDiv {
-    margin: 20px;
-    border-color: black;
-}
-
 .yelp-images {
-   
-  width:100%;
-
+    width: 100%;
 }
 
+#searchBar {
+    margin-bottom: 50px;
+    background-color: beige
+}
+
+#surveycard {
+    background-color: beige;
+}
+
+#yelpArticles {
+    background-image: url("https://files.slack.com/files-pri/TKD85M50X-FL8L5CW49/image.png");
+}
+
+.giffyResult {
+    float: left;
+    padding-right: 3%;
+}

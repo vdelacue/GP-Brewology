@@ -363,14 +363,21 @@ $("#submit-btn").on("click", function (event) {
     var sortedResults = resultsArr.sort(function (a, b) {
         return a - b;
     });
-    console.log()
+    console.log("etotal " + eTotal)
+    console.log("resultsArr" + resultsArr);
+    console.log("ctotal " + cTotal)
+    console.log("sorted" + sortedResults);
+    
     if (eTotal === sortedResults[4]) {
-        ajaxGifCall("ID#");
+        ajaxGifCall("l1J9Ox4goQckiAb1m");
         $("#resultsP").append(
-            `<h4>You Scored ${eTotal} out of 10 on Extraversion Trait!</h4>
+            `<h1>Drink an IPA!</h1>
+            <h4>You Scored ${eTotal} out of 10 on Extraversion Trait!</h4>
          <br>
-         <p>You enjoy meeting new people and like to start conversations!</p>
-        <p> </p>`)
+         <p>You are a very social person. You love being at the center of things, meeting new people and 
+         steering the conversation to new things. An IPA, like you is a strong personality that doesn't bite its 
+         tongue. They're trendy, chic and will get you feeling nice after just a couple!</p>
+    `)
     } else if (nTotal === sortedResults[4]) {
         ajaxGifCall("ID#");
         $("#resultsP").append(
@@ -441,5 +448,6 @@ $("#submit-btn").on("click", function (event) {
 //     <div id="neroticism">
 //         <h1>Drink a Strout!</h1>
 //         <div id="neroticism-img"></div>
-//         <p>You are an emotional person, more inclined to feelings of depression or anxiety. It takes you a little while to bounce back after stressful events. And a Stout like you is a little on the dark side, but heavy and warm like a blanket or a hug, it'll wrap itself around you and be just what you need to weather the storm.         </p>
-//     </div>
+//         <p>You are an emotional person, more inclined to feelings of anxiety. It takes you a little while to bounce back after stressful events. And a Stout like you is a little on the dark side, but heavy and warm like a blanket or a hug, it'll wrap itself around you and be just what you need to weather the storm.         </p>
+//          <p>Brown, porter, and stout crafts bristle with dark, creamy flavors. These are the kinds of beers one drinks leisurely, with each sip savored and appreciated. Fans of brown/porter/stout beers mirror this sipping style in other aspects of their lives, making them contemplative and intelligent. They love engaging in meaningful conversations among intimate circles of friends. They much prefer small social settings, and avoid large, loud, crowded environments.<p>     
+//</div>
