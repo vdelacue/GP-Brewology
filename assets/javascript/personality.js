@@ -281,7 +281,7 @@ function createPromptItems() {
         var promptsDiv = $(`<div class="questionCon" id="div${i}"></div>`)
         promptsDiv.append(`<p>${inputlVal}</p>`);
         $("#quiz").append(promptsDiv);
-        
+
         //for each option create a radio button that groups questions together
         for (var x = 0; x < promptsVals.length; x++) {
             var radioVal = prompts[i].prompt_values[x].value;
@@ -324,7 +324,6 @@ var oTotal = 0;
 //Global function for ajax call
 
 var ajaxGifCall = function (strID) {
-
     var queryUrl =
         "https://api.giphy.com/v1/gifs/" +
         strID +
@@ -345,18 +344,18 @@ var ajaxGifCall = function (strID) {
 };
 
 $("#submit-btn").on("click", function (event) {
-
     event.preventDefault();
     console.log("results clicked");
     $("#quizForm").hide();
-//weight total of each personality trait
+
+    //weight total of each personality trait
     eTotal = prompts[0].userChoice + prompts[5].userChoice;
     aTotal = prompts[1].userChoice + prompts[6].userChoice;
     cTotal = prompts[2].userChoice + prompts[7].userChoice;
     nTotal = prompts[3].userChoice + prompts[8].userChoice;
     oTotal = prompts[4].userChoice + prompts[9].userChoice;
 
-    //array of result totals that can be sorted to find strongest trait
+    //array of result totals that can be sorted to find strongest trait at last index of 4
     var resultsArr = [eTotal, aTotal, cTotal, nTotal, oTotal];
     var sortedResults = resultsArr.sort(function (a, b) {
         return a - b;
@@ -365,7 +364,7 @@ $("#submit-btn").on("click", function (event) {
     console.log("resultsArr" + resultsArr);
     console.log("ctotal " + cTotal)
     console.log("sorted" + sortedResults);
-    
+
     if (eTotal === sortedResults[4]) {
         ajaxGifCall("l1J9Ox4goQckiAb1m");
         $("#resultsP").append(
@@ -376,32 +375,36 @@ $("#submit-btn").on("click", function (event) {
          steering the conversation to new things. An IPA, like you is a strong personality that doesn't bite its 
          tongue. They're trendy, chic and will get you feeling nice after just a couple!</p>
     `)
-    } else if (nTotal === sortedResults[4]) {
-        ajaxGifCall("ID#");
-        $("#resultsP").append(
-            `<h4>You Scored ${nTotal} out of 10 on Neuroticism Trait!</h4>
-         <br>
-         <p>You enjoy meeting new people and like to start conversations!</p>
-        <p> </p>`)
-    } else if (oTotal === sortedResults[4]) {
-        ajaxGifCall("ID#");
-        $("#resultsP").append(
-            `<h4>You Scored ${oTotal} out of 10 on Openness Trait!</h4>
-         <br>
-         <p>You enjoy meeting new people and like to start conversations!</p>
-        <p> </p>`)
     } else if (cTotal === sortedResults[4]) {
-        ajaxGifCall("ID#");
+        ajaxGifCall("lz4APvJRdLxLBwZOG9");
         $("#resultsP").append(
             `<h1>Drink a Light Beer!</h1>
-            <h4>You Scored ${cTotal} out of 10 on Conscientious Trait!</h4>
-         <br>
-         <p>You spend a lot of time preparing and finish important tasks right away, you pay attention to detail and enjoy your set schedule.</p>
-//        <p>A Light Beer would suit you best for it's refresing taste,low carbs and calories. Still allowing you to relax without taking away from the rest of your day!</p>`)
+            <h4>You Scored ${cTotal} out of 10 on Conscientiousness Trait!</h4>
+            <br>
+            <p>You spend a lot of time preparing and finish important tasks right away, you pay attention to detail and enjoy your set schedule.</p>
+            <p>A Light Beer would suit you best for it's refresing taste,low carbs and low calories. A light beer allows you to relax without taking away from the rest of your day!</p>
+        `)
+    } else if (oTotal === sortedResults[4]) {
+        ajaxGifCall("BcP32J8pMXAzqEkGDj");
+        $("#resultsP").append(
+            `<h1>Drink a Sour Beer!</h1>
+            <h4>You Scored ${oTotal} out of 10 on Openness to New Experiences Trait!</h4>
+            <br>
+            <p>You spend a lot of time preparing and finishing important tasks right away, you pay attention to detail and enjoy your set schedule.</p>
+            <p>A Light Beer would suit you best for it's refresing taste,low carbs and low calories. A light beer allows you to relax without taking away from the rest of your day!</p>
+        `)
     } else if (aTotal === sortedResults[4]) {
         ajaxGifCall("ID#");
         $("#resultsP").append(
-            `<h4>You Scored ${aTotal} out of 10 on Agreeableness Trait!</h4>
+            `<h1>Drink a Light Beer!</h1>
+            <h4>You Scored ${aTotal} out of 10 on Calsdjfhlaksjdfhlaksjdfha Trait!</h4>
+         <br>
+         <p>You spend a lot of time preparing and finish important tasks right away, you pay attention to detail and enjoy your set schedule.</p>
+//        <p>A Light Beer would suit you best for it's refresing taste,low carbs and calories. Still allowing you to relax without taking away from the rest of your day!</p>`)
+    } else if (nTotal === sortedResults[4]) {
+        ajaxGifCall("ID#");
+        $("#resultsP").append(
+            `<h4>You Scored ${nTotal} out of 10 on Agreeableness Trait!</h4>
          <br>
          <p>You enjoy meeting new people and like to start conversations!</p>
         <p> </p>`)
