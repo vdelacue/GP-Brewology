@@ -396,11 +396,12 @@ $("#submit-btn").on("click", function (event) {
     } else if (aTotal === sortedResults[4]) {
         ajaxGifCall("ID#");
         $("#resultsP").append(
-            `<h1>Drink a Light Beer!</h1>
-            <h4>You Scored ${aTotal} out of 10 on Calsdjfhlaksjdfhlaksjdfha Trait!</h4>
+            `<h1>Drink a Belgian Wheat or a tasty Cider!</h1>
+            <h4>You Scored ${aTotal} out of 10 on Agreeableness Trait!</h4>
          <br>
-         <p>You spend a lot of time preparing and finish important tasks right away, you pay attention to detail and enjoy your set schedule.</p>
-//        <p>A Light Beer would suit you best for it's refresing taste,low carbs and calories. Still allowing you to relax without taking away from the rest of your day!</p>`)
+         <p>You are a very empathetic person who cares for others. You enjoy helping and contributing to others happiness and are always there when someone needs assistance.</p>
+                 <p>A Belgian Wheat would suit you best for its sweetness and accessibility. A popular people pleaser, the belgian wheat like you is always there when someone needs a little pick me up!</p>
+             `)
     } else if (nTotal === sortedResults[4]) {
         ajaxGifCall("ID#");
         $("#resultsP").append(
