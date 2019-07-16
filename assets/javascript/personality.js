@@ -361,7 +361,14 @@ $("#submit-btn").on("click", function (event) {
         return a - b;
     });
  
-    if (eTotal === sortedResults[4]) {
+    if (sortedResults[4] < 6) {
+        ajaxGifCall("3o752gZdDHjObx309W");
+        $("#resultsP").append( `<h1>You're clearly a Wine person!</h1>
+        <br>
+        <p>Based on your results, 
+        wine would be a better option for you! You enjoy the finer things in life and taking this quiz was not one of them!</p>
+        <a href="https://www.verywellmind.com/the-big-five-personality-dimensions-2795422">Click here to learn more about Big 5 Personality Traits</a>`)
+    } else if (eTotal === sortedResults[4]) {
         ajaxGifCall("l1J9Ox4goQckiAb1m");
         $("#resultsP").append(
             `<h1>Drink an IPA!</h1>
@@ -418,7 +425,7 @@ $("#submit-btn").on("click", function (event) {
         <p>Brown, porter, and stout crafts bristle with dark, creamy flavors are your brand. These are the kinds of beers one drinks leisurely, with each sip savored and appreciated. Fans of brown/porter/stout beers mirror this sipping style in other aspects of their lives, 
         making them contemplative and intelligent. They love engaging in meaningful conversations among intimate circles of friends. They much prefer small social settings, and avoid large, loud, crowded environments.<p>     
         <a href="https://www.verywellmind.com/the-big-five-personality-dimensions-2795422">Click here to learn more about Big 5 Personality Traits</a>`)
-    }
+    } 
 
 
 

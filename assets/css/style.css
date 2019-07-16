@@ -24,6 +24,7 @@ body {
 #quizForm {
     background-color: beige;
     padding: 2%;
+    padding-left: 7%;
 }
 
 .results {
@@ -57,4 +58,8 @@ body {
 .giffyResult {
     float: left;
     padding-right: 3%;
+}
+
+#submit-btn {
+    margin-top: 5%;
 }
