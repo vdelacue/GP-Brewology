@@ -12,9 +12,6 @@ Bootstrap, Materialize and Font-Awesome are used to layout the website as well a
 The personality quiz chooses a beer you might like based on your personality.
 Yelp API is used to find nearby brewery's.
 
-#Screenshots
-https://github.com/vdelacue/GP-Brewology/blob/master/README.md/assets/images/Screenshot(10).png
-
 #Code
 
    #landing
