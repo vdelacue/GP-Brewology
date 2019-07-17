@@ -330,14 +330,12 @@ var ajaxGifCall = function (strID) {
         gifImage.attr("src", gifResults);
         gifImage.attr("class", "giffyResult")
         gifImage.attr("alt", "cheers");
-        // console.log(results);
         $("#resultsP").prepend(gifImage);
     });
 };
 
 $("#submit-btn").on("click", function (event) {
     event.preventDefault();
-    console.log("results clicked");
     $("#quizForm").hide();
 
     //weight total of each personality trait
