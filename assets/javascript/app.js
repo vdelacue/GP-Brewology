@@ -26,7 +26,6 @@ $(document).ready(function () {
   //In the ajax call, I used data to build the URL without having to add that information to the url string
 
   function yelpQueryURL(userLocation) {
-    console.log(userLocation);
     var url = `https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search`;
     var yelpKey =
       "Mkvzgj8Vt_NhJJHmP7s5yNOYpOB5P6NgLK6ev6O8HyrhXvhn9nisG3WvUovYSz1PHe3cqnhK8LUThY4AoXJ1O17QoBlD-S4IlovdzhUX2BB0j5RCO3kp4w-R1WknXXYx";
@@ -41,8 +40,7 @@ $(document).ready(function () {
         term: "brewery",
         location: userLocation
       }
-    }).then(function (response) {
-      console.log(response); 
+    }).then(function (response) { 
 
       // looping through all of the yelp businesses to display the name, address, and image
       for (var i = 0; i < 12; i++) {
