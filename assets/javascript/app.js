@@ -5,6 +5,7 @@ $(document).ready(function () {
   //Created a variable for userLocation to pull the user location input in the click function
     //var userLocation is pulled from the click function and placed into the API function with the Yelp URL and API key
 
+    $(".yelpLogo").hide();
 
   // $("#yelpArticles").hide();
 
@@ -16,6 +17,7 @@ $(document).ready(function () {
     $("#yelpArticles").show();
     yelpQueryURL(userLocation);
     $("#beerPic").hide();
+    $(".yelpLogo").show();
   });
 
 //Yelp doesn't allow API calls from front end
