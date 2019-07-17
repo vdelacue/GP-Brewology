@@ -359,7 +359,7 @@ $("#submit-btn").on("click", function (event) {
             `<h1>You're clearly a Wine person!</h1>
             <br>
             <p>Based on your results, 
-            wine would be a better option for you! You enjoy the finer things in life and taking this quiz was not one of them!</p>
+            wine would be a better option for you! You enjoy the finer things in life and taking quizzes is not one of them!</p>
             <a href="https://www.verywellmind.com/the-big-five-personality-dimensions-2795422">
             Click here to learn more about Big 5 Personality Traits</a>`
         )
@@ -371,9 +371,9 @@ $("#submit-btn").on("click", function (event) {
             `<h1>Drink an IPA!</h1>
             <h4>You Scored ${eTotal} out of 10 on Extraversion Trait!</h4>
             <br>
-            <p>You are a very social person. You love being at the center of things, meeting new people and 
+            <p>You are a very social person. You love being at the center of things, meeting new people, and 
             steering the conversation to new things. An IPA, like you is a strong personality that doesn't bite its 
-            tongue. They're trendy, chic and will get you feeling nice after just a couple!</p>
+            tongue. IPAs are trendy, chic, and will get you feeling nice after just a couple!</p>
             <a href="https://www.verywellmind.com/the-big-five-personality-dimensions-2795422">
             Click here to learn more about Big 5 Personality Traits</a>`
         )
@@ -385,8 +385,9 @@ $("#submit-btn").on("click", function (event) {
             `<h1>Drink a Light Beer!</h1>
             <h4>You Scored ${cTotal} out of 10 on Conscientiousness Trait!</h4>
             <br>
-            <p>You spend a lot of time preparing and finish important tasks right away, you pay attention to 
-            detail and enjoy your set schedule.</p>
+            <p>You are detail oriented and enjoy structure. You spend a lot of time preparing and finishing important tasks immediately.</p>
+            <p>A Light Beer would suit you best for it's refresing taste, low carbs, and low calories. 
+            A light beer allows you to relax without taking away from the rest of your day!</p>
             <p>A Light Beer would suit you best for it's refresing taste,low carbs and low calories. 
             A light beer allows you to relax without taking away from the rest of your day!</p>
             <a href="https://www.verywellmind.com/the-big-five-personality-dimensions-2795422">
@@ -415,10 +416,10 @@ $("#submit-btn").on("click", function (event) {
             `<h1>Drink a Belgian Wheat or a Tasty Cider!</h1>
             <h4>You Scored ${aTotal} out of 10 on Agreeableness Trait!</h4>
             <br>
-            <p>You are a very empathetic person who cares for others. You enjoy helping and contributing to others 
+            <p>You are a very empathetic person who cares for others. You enjoy helping and contributing to others' 
             happiness and are always there when someone needs assistance.</p>
-            <p>A Belgian Wheat would suit you best for its sweetness and accessibility. A popular people pleaser, 
-            the belgian wheat like you is always there when someone needs a little pick me up!</p>
+            <p>These sweet drinks would suit you best for their sweetness and accessibility. A popular people pleaser, 
+            the Belgian Wheat like you is always there when someone needs a little pick me up!</p>
             <a href="https://www.verywellmind.com/the-big-five-personality-dimensions-2795422">
             Click here to learn more about Big 5 Personality Traits</a>`
         )
@@ -431,9 +432,12 @@ $("#submit-btn").on("click", function (event) {
             <h4>You Scored ${nTotal} out of 10 on Neuroticism Trait!</h4>
             <br>
             <p>You are sensitive person more inclined to feelings of anxiety. 
-            It takes you a little while to bounce back after stressful events. And a Stout like you is a little on the dark side, but heavy and warm like a blanket or a hug, it'll wrap itself around you and be just what you need to weather the storm.</p>
-            <p>Brown, porter, and stout crafts bristle with dark, creamy flavors are your brand. These are the kinds of beers one drinks leisurely, with each sip savored and appreciated. Fans of brown/porter/stout beers mirror this sipping style in other aspects of their lives, 
-            making them contemplative and intelligent. They love engaging in meaningful conversations among intimate circles of friends. They much prefer small social settings, and avoid large, loud, crowded environments.<p>     
+            It takes you a little while to bounce back after stressful events. And a Stout like you is a little on the dark side, 
+            but heavy and warm like a blanket or a hug, it'll wrap itself around you and be just what you need to weather the storm.</p>
+            <p>Brown, porter, and stout crafts bristle with dark, creamy flavors are your brand. These are the kinds of beers one drinks leisurely, 
+            with each sip savored and appreciated. Fans of these beers mirror this sipping style in other aspects of their lives, 
+            making them contemplative and intelligent. They love engaging in meaningful conversations among intimate circles of friends. 
+            They much prefer small social settings, and avoid large, loud, crowded environments.<p>      
             <a href="https://www.verywellmind.com/the-big-five-personality-dimensions-2795422">
             Click here to learn more about Big 5 Personality Traits</a>`
         )
