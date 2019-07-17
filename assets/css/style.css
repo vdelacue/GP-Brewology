@@ -43,7 +43,7 @@ body {
 }
 
 #searchBar {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     background-color: beige
 }
 
@@ -62,4 +62,9 @@ body {
 
 #submit-btn {
     margin-top: 5%;
+}
+
+#beerPic {
+    height: 600px;
+    width: 1110px;
 }
