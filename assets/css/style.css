@@ -65,13 +65,13 @@ body {
 }
 
 #beerPic {
-    height: 600px;
-    width: 1110px;
+    width: 100%;
 }
 
 .yelpLogo {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 35%;
+    width: 70px;
+    height: 40px;
 }
