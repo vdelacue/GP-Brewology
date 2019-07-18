@@ -55,15 +55,17 @@ Each trait's final weight can be scored from a possible 2 to 10.
 The highest trait is used to make the recommendation. Each trait is linked to a beer.
 
 
-
-
    #Api
-   
-Yelp for loop stops at 12 results. Yelp usually gives 20 but, it was set to twelve because it wouldn't matter if there were brewerys too far away.
-Jquery call for yelp articles to apend the card that will chose so that is could appear in the html.
-response
-On click function is created for the zipcode search and is stored at user input. User input holds the zipcode.
+Two APIs used- Giphy and Yelp
 
+Yelp is not compatible with CORS so JSON response was pulled from proxy website (CORS-anywhere heroku) with yelp search endpoint attached to it
+Yelp API passed through headers
+Data used in the ajaxCall to keep the url string neater
+UserInput used in on-click function so user can search any location and find breweries in that area
+Yelp API defaults a return of 20 businesses- used for loop to return only 12 results
+jQuery used to append results into card on html
+
+Giphy IDs used so specific gifs are attached with the specific results
 
 #Credits
 

@@ -383,10 +383,8 @@ $("#submit-btn").on("click", function (event) {
             `<h1>Drink a Light Beer!</h1>
             <h4>You Scored ${cTotal} out of 10 on Conscientiousness Trait!</h4>
             <br>
-            <p>You are detail oriented and enjoy structure. You spend a lot of time preparing and finishing important tasks immediately.</p>
+            <p>You are detail oriented and enjoy structure. You spend a lot of time preparing and prioritize finishing important tasks.</p>
             <p>A Light Beer would suit you best for it's refresing taste, low carbs, and low calories. 
-            A light beer allows you to relax without taking away from the rest of your day!</p>
-            <p>A Light Beer would suit you best for it's refresing taste,low carbs and low calories. 
             A light beer allows you to relax without taking away from the rest of your day!</p>
             <a href="https://www.verywellmind.com/the-big-five-personality-dimensions-2795422">
             Click here to learn more about Big 5 Personality Traits</a>`
