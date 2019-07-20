@@ -1,20 +1,21 @@
-#Brewology
+#Brewology#
 
-Brewology offers beer you would like based on a personality test and also works as a brewery locator.
+Brewology is an interactive site that pairs users with a type of beer based on their results of a personality test. The test is based on a psychological industry standard called "Big 5 Personality Traits". It is professionally used and an accurate protrayal of personality types.
 
-#Built with
+
+#Built with#
 
 The website uses the Giphy and Yelp APIS for a gif and brewery locator respectivley.
 Bootstrap, Materialize and Font-Awesome are used to layout the website as well as add buttons.
 
-#Features
+#Features#
 
 The personality quiz chooses a beer you might like based on your personality.
 Yelp API is used to find nearby brewery's.
 
 #Code
 
-   #landing
+   #landin#g
    
 Background image is set
 
@@ -24,7 +25,7 @@ Two columns with nothing that take up two columns each they are surrounding the 
 
 When the buttons "Location" and "Personality" are pressed they go to the same page. Personality brings you to the top of that page while location brings you to the bottom so the application so that the user screen displays the app they clicked on hthe top.   
  
-   #index
+   #index#
    
 Materialize, bootstrap, and fontawesone are linked.
 
@@ -38,13 +39,13 @@ The next row with the personality test in it is made of one column using bootstr
 
 The containers at the bottom beneath the text display yelp results.
 
-   #personality
+   #personality#
    
 Questions for the quiz are created and listed as promps. Each prompt is made to measure a certain trait and each of the prompt_values (answer options) are given a weight of 1,2,3,4, or 5.
 
 createPromptItems appends each question in a <p> tag placed in the ul with the quiz id.
 
-   #personalty-response
+   #personalty-response#
    
 Calculates extraversion trait by adding the first and sixth prompts.
 Calculates agreeableness by adding the second and seventh prompt.
@@ -55,7 +56,7 @@ Each trait's final weight can be scored from a possible 2 to 10.
 The highest trait is used to make the recommendation. Each trait is linked to a beer.
 
 
-   #Api
+   #Api#
 Two APIs used- Giphy and Yelp
 
 Yelp is not compatible with CORS so JSON response was pulled from proxy website (CORS-anywhere heroku) with yelp search endpoint attached to it
