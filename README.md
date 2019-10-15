@@ -1,10 +1,10 @@
 ##Brewology
 
-Brewology is an interactive site that pairs users with a type of beer based on their results of a personality test. The test is based on a psychological industry standard called "Big 5 Personality Traits". It is professionally used and an accurate protrayal of personality types.
+
 
  
 ## Brewology - “Don’t worry, Beer happy!”
-An interactive app that connects beer and brewery information with user based on personality traits!
+An interactive app that connects beer and brewery information to a user based on personality traits!
 User logins in and creates profile that continues to build personality traits based on current and past assessments.
 User can start with simple 5 min assessment that outlines personality traits based on Big5:
 1. Openness 
