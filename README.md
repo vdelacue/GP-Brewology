@@ -19,8 +19,8 @@ Either personality testing API or FLICKR API for picture to match beer person is
 ## Technologies and Assignments:
 Front-End: (HTML & CSS-Bootstrap or Materialize or Parrallax): Emily & William Back-End: (Javascript): Vanessa & Olivia
                           
- 
-## Built with#
+Anthony S. Readme:
+#Built with#
 
 The website uses the Giphy and Yelp APIS for a gif and brewery locator respectivley.
 Bootstrap, Materialize and Font-Awesome are used to layout the website as well as add buttons.
