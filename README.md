@@ -2,8 +2,30 @@
 
 Brewology is an interactive site that pairs users with a type of beer based on their results of a personality test. The test is based on a psychological industry standard called "Big 5 Personality Traits". It is professionally used and an accurate protrayal of personality types.
 
+ 
+## Brewology - “Don’t worry, Beer happy!”
+An interactive app that connects beer and brewery information with user based on personality traits!
+User logins in and creates profile that continues to build personality traits based on current and past assessments.
+User can start with simple 5 min assessment that outlines personality traits based on Big5:
+1. Openness 
+2. Conscientiousness
+3. Extraversion
+4. Agreeableness
+5. Neuroticism
+ 
+ After submitting assessment, personality traits will be displayed with a type of beer that matches.
+User then can choose between “near me” or “road trip” to have a search populated with names of breweries near them.
 
-#Built with#
+## API’s to use:
+Yelp to populate breweries and handle search
+Either personality testing API or FLICKR API for picture to match beer person is paired with
+                                                     
+
+## Technologies and Assignments:
+Front-End: (HTML & CSS-Bootstrap or Materialize or Parrallax): Emily & William Back-End: (Javascript): Vanessa & Olivia
+                          
+ 
+## Built with#
 
 The website uses the Giphy and Yelp APIS for a gif and brewery locator respectivley.
 Bootstrap, Materialize and Font-Awesome are used to layout the website as well as add buttons.
@@ -71,4 +93,3 @@ Giphy IDs used so specific gifs are attached with the specific results
 #Credits
 
 Emily Betz, Olivia Kalinowski, Will Stark, Vanessa de La Cuetara, Anthony Sambogna
- 
