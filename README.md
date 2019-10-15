@@ -1,3 +1,4 @@
+# [Click here to go to Brewology Site](https://vdelacue.github.io/GP-Brewology/)
 ## Brewology - “Don’t worry, Beer happy!”
 An interactive app that connects beer and brewery information to a user based on personality traits!
 User logins in and creates profile that continues to build personality traits based on current and past assessments.
